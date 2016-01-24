@@ -12,5 +12,9 @@ exports.config = {
     ],
 
     baseUrl: 'http://localhost:9000/' // Where your app is being served from
+
+if (process.env.SNAP_CI) {
+  exports.config.chromeDriver = '/usr/local/bin/chromedriver';
+}
 };
 
